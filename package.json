@@ -1,6 +1,6 @@
 {
   "name": "township-email",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Helpers for sending authentication emails",
   "main": "index.js",
   "directories": {
