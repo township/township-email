@@ -10,11 +10,11 @@ var emails = require('./emails')
 * @param {Object} config – config object
 **/
 module.exports = function townshipEmail (config) {
-  assert.equal(typeof config, 'object', 'config object is required')
-  assert.ok(config.transport, 'config.transport object or string is required')
+  assert(typeof config === 'object', 'config object is required')
+  assert(config.transport, 'config.transport object or string is required')
 
   config.emails = config.emails || {}
-  assert.equal(typeof config.emails, 'object', 'config.emails property must be an object')
+  assert(typeof config.emails === 'object', 'config.emails property must be an object')
 
   var mailer = nodemailer.createTransport(config.transport)
   var fromEmail = config.fromEmail
